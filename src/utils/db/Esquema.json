@@ -1,0 +1,14 @@
+{
+    "id": "string",
+    "nome": "string",
+    "categoria": "string",
+    "diasEncontro": ["string"],
+    "horario": "string",
+    "local": "string",
+    "coordenador": "string",
+    "membrosAtivos": "number",
+    "status": "string",
+    "livroAtual": {
+        "titulo": "string"
+    }
+}

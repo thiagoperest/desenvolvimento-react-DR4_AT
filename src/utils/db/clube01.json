@@ -1,0 +1,71 @@
+{
+  "id": "clb-001",
+  "nome": "Vortex Fantástico",
+  "descricao": "Um clube dedicado à exploração dos mais ricos universos de fantasia, desde os clássicos medievais até as fantasias urbanas contemporâneas.",
+  "categoria": "Fantasia",
+  "diasEncontro": [
+    "Segunda",
+    "Quarta"
+  ],
+  "horario": "19:00",
+  "local": "Sala de Leitura 1",
+  "coordenador": "Ana Lúcia Mendes",
+  "membrosAtivos": 15,
+  "status": "Ativo",
+  "dataCriacao": "2023-03-15T00:00:00Z",
+  "livroAtual": {
+    "titulo": "O Nome do Vento",
+    "autor": "Patrick Rothfuss",
+    "dataInicio": "2024-01-10T00:00:00Z",
+    "dataTerminoPrevisto": "2024-03-20T00:00:00Z"
+  },
+  "sessoes": [
+    {
+      "id": "sess-001-1",
+      "data": "2024-01-15T19:00:00Z",
+      "livroDiscutido": "O Nome do Vento (Capítulos 1-5)",
+      "participantes": 14,
+      "topicosAbordados": [
+        "Sistema de magia",
+        "Personagem principal",
+        "Mundo construído"
+      ],
+      "ata": "Primeira discussão sobre a construção do mundo e a apresentação do personagem Kvothe. Debate animado sobre o sistema de magia simpatética."
+    },
+    {
+      "id": "sess-001-2",
+      "data": "2024-01-22T19:00:00Z",
+      "livroDiscutido": "O Nome do Vento (Capítulos 6-10)",
+      "participantes": 13,
+      "topicosAbordados": [
+        "Universidade",
+        "Relacionamentos",
+        "Música"
+      ],
+      "ata": "Discussão focada na entrada de Kvothe na Universidade e seu talento musical. Debate sobre seus relacionamentos iniciais."
+    }
+  ],
+  "membros": [
+    {
+      "id": "mbr-001-1",
+      "nome": "Ana Lúcia Mendes",
+      "email": "ana.mendes@email.com",
+      "dataIngresso": "2023-03-15T00:00:00Z",
+      "frequencia": 95
+    },
+    {
+      "id": "mbr-001-2",
+      "nome": "Pedro Oliveira",
+      "email": "pedro.oliveira@email.com",
+      "dataIngresso": "2023-04-02T00:00:00Z",
+      "frequencia": 88
+    },
+    {
+      "id": "mbr-001-3",
+      "nome": "Carla Santos",
+      "email": "carla.santos@email.com",
+      "dataIngresso": "2023-05-10T00:00:00Z",
+      "frequencia": 92
+    }
+  ]
+}
