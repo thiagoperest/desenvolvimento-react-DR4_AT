@@ -1,12 +1,20 @@
 import { useState } from 'react'
 
-export default function NovoClube() {
+export default function NovoClube({ onAdicionarClube }) {
   const [nome, setNome] = useState('')
 
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    if (nome.trim()) {
+      onAdicionarClube({ nome: nome.trim() })
+      setNome('')
+    }
+  }
+
   return (
-    <div>
+    <div className="novo-clube-form">
       <h2>Adicionar Novo Clube</h2>
-      <form>
+      <form onSubmit={handleSubmit}>
         <label>
           Nome do Clube:
           <input 
@@ -16,6 +24,7 @@ export default function NovoClube() {
             placeholder="Digite o nome do clube"
           />
         </label>
+        <button type="submit">Adicionar</button>
       </form>
     </div>
   )

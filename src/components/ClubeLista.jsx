@@ -1,4 +1,6 @@
 import { useState, useEffect } from 'react'
+import NovoClube from './NovoClube.jsx'
+import './ClubeLista.css'
 
 export default function ClubeLista() {
   const [clubes, setClubes] = useState([])
@@ -10,14 +12,25 @@ export default function ClubeLista() {
       .catch(error => console.error('Erro ao carregar clubes:', error))
   }, [])
 
+  const adicionarClube = (novoClube) => {
+    const clubeComId = {
+      ...novoClube,
+      id: `clb-${String(clubes.length + 1).padStart(3, '0')}`
+    }
+    setClubes([clubeComId, ...clubes])
+  }
+
   return (
-    <div>
+    <div className="clube-lista-container">
       <h1>Clubes de Leitura</h1>
-      <ul>
-        {clubes.map(clube => (
-          <li key={clube.id}>{clube.nome}</li>
-        ))}
-      </ul>
+      <div className="content-card">
+        <NovoClube onAdicionarClube={adicionarClube} />
+        <ul>
+          {clubes.map(clube => (
+            <li key={clube.id}>{clube.nome}</li>
+          ))}
+        </ul>
+      </div>
     </div>
   )
 }
