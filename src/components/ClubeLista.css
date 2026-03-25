@@ -1,4 +1,4 @@
-.clube-lista-container {
+.clube-lista {
   margin: 0 auto;
   padding: 0 0 30px 0;
   display: flex;
@@ -6,7 +6,7 @@
   min-height: 100vh;
 }
 
-.clube-lista-container h1 {
+.clube-lista__title {
   background: linear-gradient(45deg, #ffffff, #f0f0f0);
   color: #2c3e50;
   text-align: center;
@@ -19,7 +19,7 @@
   box-shadow: 0 -5px 30px rgba(0, 0, 0, 0.1);
 }
 
-.content-card {
+.clube-lista__content {
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(10px);
   border-radius: 0 0 20px 20px;
@@ -28,52 +28,53 @@
   flex: 1;
 }
 
-.clube-lista-container ul {
+.clube-lista__list {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.clube-lista-container li {
+.clube-lista__item {
   background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
   border-left: 4px solid #667eea;
   padding: 18px 25px;
   margin-bottom: 8px;
   font-size: 1.1rem;
   color: #2c3e50;
-}
-
-.clube-lista-container li:hover {
-  border-left-color: #764ba2;
   cursor: pointer;
 }
 
-.clube-lista-container li:last-child {
+.clube-lista__item:hover {
+  border-left-color: #764ba2;
+}
+
+.clube-lista__item:last-child {
   margin-bottom: 0;
   border-radius: 0 0 20px 20px;
 }
 
-.novo-clube-form {
+/* Block: novo-clube */
+.novo-clube {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   padding: 30px;
   margin-bottom: 0;
 }
 
-.novo-clube-form h2 {
+.novo-clube__title {
   color: white;
   margin: 0 0 20px 0;
   font-size: 1.5rem;
   font-weight: 400;
 }
 
-.novo-clube-form label {
+.novo-clube__label {
   display: block;
   margin-bottom: 15px;
   color: rgba(255, 255, 255, 0.9);
   font-weight: 500;
 }
 
-.novo-clube-form input {
+.novo-clube__input {
   width: 100%;
   padding: 15px 20px;
   border: none;
@@ -85,12 +86,12 @@
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-.novo-clube-form input:focus {
+.novo-clube__input:focus {
   outline: none;
   background: white;
 }
 
-.novo-clube-form button {
+.novo-clube__button {
   background: white;
   color: #667eea;
   border: none;
@@ -103,6 +104,6 @@
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-.novo-clube-form button:hover {
+.novo-clube__button:hover {
   background: #f8f9fa;
 }

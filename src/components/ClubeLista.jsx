@@ -21,13 +21,13 @@ export default function ClubeLista() {
   }
 
   return (
-    <div className="clube-lista-container">
-      <h1>Clubes de Leitura</h1>
-      <div className="content-card">
+    <div className="clube-lista">
+      <h1 className="clube-lista__title">Clubes de Leitura</h1>
+      <div className="clube-lista__content">
         <NovoClube onAdicionarClube={adicionarClube} />
-        <ul>
+        <ul className="clube-lista__list">
           {clubes.map(clube => (
-            <li key={clube.id}>{clube.nome}</li>
+            <li key={clube.id} className="clube-lista__item">{clube.nome}</li>
           ))}
         </ul>
       </div>

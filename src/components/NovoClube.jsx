@@ -12,19 +12,20 @@ export default function NovoClube({ onAdicionarClube }) {
   }
 
   return (
-    <div className="novo-clube-form">
-      <h2>Adicionar Novo Clube</h2>
+    <div className="novo-clube">
+      <h2 className="novo-clube__title">Adicionar Novo Clube</h2>
       <form onSubmit={handleSubmit}>
-        <label>
+        <label className="novo-clube__label">
           Nome do Clube:
           <input 
             type="text"
+            className="novo-clube__input"
             value={nome}
             onChange={(e) => setNome(e.target.value)}
             placeholder="Digite o nome do clube"
           />
         </label>
-        <button type="submit">Adicionar</button>
+        <button type="submit" className="novo-clube__button">Adicionar</button>
       </form>
     </div>
   )
