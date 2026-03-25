@@ -1,18 +1,15 @@
 import { useClube } from '../context/ClubeContext.jsx'
+import NovoClube from './NovoClube.jsx'
 import './ClubeLista.css'
 
-export default function ClubeLista() {
-  const { clubes } = useClube()
+export default function AdicionarClubePage() {
+  const { adicionarClube } = useClube()
 
   return (
     <div className="clube-lista">
       <h1 className="clube-lista__title">Clubes de Leitura</h1>
       <div className="clube-lista__content">
-        <ul className="clube-lista__list">
-          {clubes.map(clube => (
-            <li key={clube.id} className="clube-lista__item">{clube.nome}</li>
-          ))}
-        </ul>
+        <NovoClube onAdicionarClube={adicionarClube} />
       </div>
     </div>
   )
