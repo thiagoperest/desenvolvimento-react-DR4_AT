@@ -4,24 +4,26 @@
   box-sizing: border-box;
 }
 
-html, body {
+html {
   height: 100%;
-  overflow-x: hidden;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) fixed;
+  overscroll-behavior: none;
 }
 
 body {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  min-height: 100vh;
   margin: 0;
   padding: 20px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: transparent;
+  min-height: 100vh;
+  overscroll-behavior: none;
 }
 
 #root {
-  height: 100%;
-}
-
-.App {
-  height: 100%;
+  width: 1126px;
+  max-width: 100%;
+  margin: 0 auto;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
