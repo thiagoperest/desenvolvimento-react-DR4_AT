@@ -1,4 +1,5 @@
 import { useClube } from '../context/ClubeContext.jsx'
+import { Link } from 'react-router-dom'
 import { X } from 'lucide-react'
 import './ClubeLista.css'
 
@@ -17,7 +18,9 @@ export default function ClubeLista() {
         <ul className="clube-lista__list">
           {clubes.map(clube => (
             <li key={clube.id} className="clube-lista__item">
-              <span>{clube.nome}</span>
+              <Link to={`/clube/${clube.id}`} className="clube-lista__link">
+                {clube.nome}
+              </Link>
               <button 
                 className="clube-lista__delete-btn"
                 onClick={(e) => handleExcluir(clube.id, e)}

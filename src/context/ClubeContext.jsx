@@ -19,7 +19,16 @@ export function ClubeProvider({ children }) {
   const adicionarClube = (novoClube) => {
     const clubeComId = {
       ...novoClube,
-      id: `clb-${String(clubes.length + 1).padStart(3, '0')}`
+      id: `clb-${String(clubes.length + 1).padStart(3, '0')}`,
+      categoria: 'Geral',
+      status: 'Ativo',
+      membrosAtivos: 0,
+      diasEncontro: ['A definir'],
+      horario: 'A definir',
+      local: 'A definir',
+      livroAtual: { titulo: 'A definir' },
+      coordenador: 'A definir',
+      descricao: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a eros augue. Pellentesque malesuada odio eu mi bibendum maximus. Vestibulum faucibus eros quis nulla luctus elementum. Sed at ullamcorper felis.'
     }
     setClubes([clubeComId, ...clubes])
   }
