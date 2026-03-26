@@ -24,8 +24,12 @@ export function ClubeProvider({ children }) {
     setClubes([clubeComId, ...clubes])
   }
 
+  const removerClube = (id) => {
+    setClubes(clubes.filter(clube => clube.id !== id))
+  }
+
   return (
-    <ClubeContext.Provider value={{ clubes, adicionarClube }}>
+    <ClubeContext.Provider value={{ clubes, adicionarClube, removerClube }}>
       {children}
     </ClubeContext.Provider>
   )

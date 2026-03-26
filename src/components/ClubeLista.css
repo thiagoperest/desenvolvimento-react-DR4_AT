@@ -64,6 +64,9 @@
   font-size: 1.1rem;
   color: #2c3e50;
   cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .clube-lista__item:hover {
@@ -73,6 +76,28 @@
 .clube-lista__item:last-child {
   margin-bottom: 0;
   border-radius: 0 0 20px 20px;
+}
+
+.clube-lista__delete-btn {
+  background: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  opacity: 0.8;
+}
+
+.clube-lista__delete-btn:hover {
+  background: #c0392b;
+  opacity: 1;
+  transform: scale(1.1);
 }
 
 .adicionar-clube-page {
@@ -119,6 +144,9 @@
   font-weight: 500;
   transition: all 0.3s ease;
   font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .adicionar-clube-page__back-link:hover {
