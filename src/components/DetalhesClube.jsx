@@ -23,11 +23,6 @@ export default function DetalhesClube() {
 
   return (
     <div className="detalhes-clube">
-      <Link to="/" className="detalhes-clube__back-link">
-        <ArrowLeft size={16} />
-        Voltar
-      </Link>
-      
       <div className="detalhes-clube__card">
         <div className="detalhes-clube__header">
           <h1 className="detalhes-clube__title">{clube.nome}</h1>
