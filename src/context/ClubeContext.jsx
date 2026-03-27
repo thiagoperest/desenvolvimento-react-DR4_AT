@@ -1,4 +1,5 @@
-import { createContext, useContext, useState, useEffect } from 'react'
+import {createContext, useContext, useEffect, useReducer} from 'react'
+import { clubeReducer, clubeInitialState } from '../reducers/clubeReducer.js'
 
 const ClubeContext = createContext()
 
@@ -7,13 +8,14 @@ export function useClube() {
 }
 
 export function ClubeProvider({ children }) {
-  const [clubes, setClubes] = useState([])
+  const [state, dispatch] = useReducer(clubeReducer, clubeInitialState)
+  const { clubes, loading, error } = state
 
   useEffect(() => {
     fetch('/src/utils/db/clubes.json')
       .then(response => response.json())
-      .then(data => setClubes(data))
-      .catch(error => console.error('Erro ao carregar clubes:', error))
+      .then(data => dispatch({ type: 'CARREGAR_CLUBES_SUCCESS', payload: data }))
+      .catch(error => dispatch({ type: 'CARREGAR_CLUBES_ERROR', payload: error.message }))
   }, [])
 
   const adicionarClube = (novoClube) => {
@@ -30,15 +32,19 @@ export function ClubeProvider({ children }) {
       coordenador: 'A definir',
       descricao: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a eros augue. Pellentesque malesuada odio eu mi bibendum maximus. Vestibulum faucibus eros quis nulla luctus elementum. Sed at ullamcorper felis.'
     }
-    setClubes([clubeComId, ...clubes])
+    dispatch({ type: 'ADICIONAR_CLUBE', payload: clubeComId })
   }
 
   const removerClube = (id) => {
-    setClubes(clubes.filter(clube => clube.id !== id))
+    dispatch({ type: 'REMOVER_CLUBE', payload: id })
+  }
+
+  const atualizarClube = (id, dados) => {
+    dispatch({ type: 'ATUALIZAR_CLUBE', payload: { id, dados } })
   }
 
   return (
-    <ClubeContext.Provider value={{ clubes, adicionarClube, removerClube }}>
+    <ClubeContext.Provider value={{ clubes, loading, error, adicionarClube, removerClube, atualizarClube }}>
       {children}
     </ClubeContext.Provider>
   )

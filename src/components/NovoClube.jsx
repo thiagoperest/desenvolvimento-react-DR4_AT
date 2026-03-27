@@ -1,34 +1,19 @@
-import { useState } from 'react'
+import { useReducer } from 'react'
+import { formReducer, initialState } from '../reducers/formReducer.js'
 
 export default function NovoClube({ onAdicionarClube }) {
-  const [nome, setNome] = useState('')
-  const [erro, setErro] = useState('')
-
-  const validarNome = (valor) => {
-    if (valor.trim() === '') {
-      setErro('O nome do clube é obrigatório')
-      return false
-    } else if (valor.trim().length < 3) {
-      setErro('O nome deve ter pelo menos 3 caracteres')
-      return false
-    } else {
-      setErro('')
-      return true
-    }
-  }
+  const [state, dispatch] = useReducer(formReducer, initialState)
+  const { nome, erro } = state
 
   const handleChange = (e) => {
-    const valor = e.target.value
-    setNome(valor)
-    validarNome(valor)
+    dispatch({ type: 'SET_NOME', payload: e.target.value })
   }
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    if (validarNome(nome)) {
+    if (!erro && nome.trim()) {
       onAdicionarClube({ nome: nome.trim() })
-      setNome('')
-      setErro('')
+      dispatch({ type: 'LIMPAR_FORM' })
     }
   }
 
