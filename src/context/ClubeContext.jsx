@@ -12,10 +12,35 @@ export function ClubeProvider({ children }) {
   const { clubes, loading, error } = state
 
   useEffect(() => {
-    fetch('/src/utils/db/clubes.json')
-      .then(response => response.json())
-      .then(data => dispatch({ type: 'CARREGAR_CLUBES_SUCCESS', payload: data }))
-      .catch(error => dispatch({ type: 'CARREGAR_CLUBES_ERROR', payload: error.message }))
+    const carregarClubes = async () => {
+      try {
+        const [clubesResponse, clube01Response, clube02Response] = await Promise.all([
+          fetch('/src/utils/db/clubes.json'),
+          fetch('/src/utils/db/clube01.json'),
+          fetch('/src/utils/db/clube02.json')
+        ])
+
+        const clubesData = await clubesResponse.json()
+        const clube01Data = await clube01Response.json()
+        const clube02Data = await clube02Response.json()
+
+        const clubesDetalhados = { 
+          [clube01Data.id]: clube01Data, 
+          [clube02Data.id]: clube02Data 
+        }
+
+        const clubesMesclados = clubesData.map(clube => {
+          const detalhes = clubesDetalhados[clube.id]
+          return detalhes ? { ...clube, ...detalhes } : clube
+        })
+
+        dispatch({ type: 'CARREGAR_CLUBES_SUCCESS', payload: clubesMesclados })
+      } catch (error) {
+        dispatch({ type: 'CARREGAR_CLUBES_ERROR', payload: error.message })
+      }
+    }
+
+    carregarClubes()
   }, [])
 
   const adicionarClube = (novoClube) => {

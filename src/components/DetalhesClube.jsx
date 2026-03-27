@@ -1,6 +1,7 @@
 import { useParams, Link } from 'react-router-dom'
 import { useClube } from '../context/ClubeContext.jsx'
 import { ArrowLeft, Users, Calendar, Clock, MapPin, BookOpen, User } from 'lucide-react'
+import DescricaoExpandivel from './DescricaoExpandivel.jsx'
 import './DetalhesClube.css'
 
 export default function DetalhesClube() {
@@ -94,7 +95,7 @@ export default function DetalhesClube() {
         {clube.descricao && (
           <div className="detalhes-clube__description">
             <h3>Descrição</h3>
-            <p>{clube.descricao}</p>
+            <DescricaoExpandivel texto={clube.descricao} maxLinhas={4} />
           </div>
         )}
       </div>
