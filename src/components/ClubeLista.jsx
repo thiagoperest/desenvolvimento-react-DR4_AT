@@ -1,14 +1,30 @@
+import { useState } from 'react'
 import { useClube } from '../context/ClubeContext.jsx'
 import { Link } from 'react-router-dom'
 import { X } from 'lucide-react'
+import ModalConfirmacao from './ModalConfirmacao.jsx'
 import './ClubeLista.css'
 
 export default function ClubeLista() {
   const { clubes, removerClube } = useClube()
+  const [modalAberto, setModalAberto] = useState(false)
+  const [clubeParaExcluir, setClubeParaExcluir] = useState(null)
 
-  const handleExcluir = (id, event) => {
+  const handleAbrirModal = (id, nome) => (event) => {
     event.stopPropagation()
-    removerClube(id)
+    setClubeParaExcluir({ id, nome })
+    setModalAberto(true)
+  }
+
+  const handleFecharModal = () => {
+    setModalAberto(false)
+    setClubeParaExcluir(null)
+  }
+
+  const handleConfirmarExclusao = () => {
+    if (clubeParaExcluir) {
+      removerClube(clubeParaExcluir.id)
+    }
   }
 
   return (
@@ -23,7 +39,7 @@ export default function ClubeLista() {
               </Link>
               <button 
                 className="clube-lista__delete-btn"
-                onClick={(e) => handleExcluir(clube.id, e)}
+                onClick={handleAbrirModal(clube.id, clube.nome)}
                 title="Excluir clube"
               >
                 <X size={16} />
@@ -32,6 +48,16 @@ export default function ClubeLista() {
           ))}
         </ul>
       </div>
+
+      <ModalConfirmacao
+        isOpen={modalAberto}
+        onClose={handleFecharModal}
+        onConfirm={handleConfirmarExclusao}
+        titulo="Excluir Clube"
+        mensagem={clubeParaExcluir ? `Tem certeza que deseja excluir o clube "${clubeParaExcluir.nome}"?` : ''}
+        textoBotaoConfirmar="Excluir"
+        textoBotaoCancelar="Cancelar"
+      />
     </div>
   )
 }
