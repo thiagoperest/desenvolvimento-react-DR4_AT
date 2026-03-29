@@ -4,7 +4,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: var(--bg-overlay);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -23,9 +23,9 @@
 }
 
 .modal-confirmacao__dialog {
-  background: white;
+  background: var(--white);
   border-radius: 12px;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  box-shadow: var(--shadow-large);
   max-width: 500px;
   width: 90%;
   animation: modal-confirmacao-slide-up 0.3s ease-out;
@@ -47,20 +47,20 @@
   justify-content: space-between;
   align-items: center;
   padding: 20px 24px;
-  border-bottom: 1px solid #e5e7eb;
+  border-bottom: 1px solid var(--gray-200);
 }
 
 .modal-confirmacao__titulo {
   margin: 0;
   font-size: 1.25rem;
   font-weight: 600;
-  color: #1f2937;
+  color: var(--gray-900);
 }
 
 .modal-confirmacao__close-btn {
   background: none;
   border: none;
-  color: #6b7280;
+  color: var(--gray-600);
   cursor: pointer;
   padding: 4px;
   display: flex;
@@ -71,8 +71,8 @@
 }
 
 .modal-confirmacao__close-btn:hover {
-  background-color: #f3f4f6;
-  color: #374151;
+  background-color: var(--gray-100);
+  color: var(--gray-800);
 }
 
 .modal-confirmacao__body {
@@ -82,7 +82,7 @@
 .modal-confirmacao__mensagem {
   margin: 0;
   font-size: 1rem;
-  color: #4b5563;
+  color: var(--gray-700);
   line-height: 1.6;
 }
 
@@ -91,7 +91,7 @@
   gap: 12px;
   justify-content: flex-end;
   padding: 16px 24px;
-  border-top: 1px solid #e5e7eb;
+  border-top: 1px solid var(--gray-200);
 }
 
 .modal-confirmacao__btn {
@@ -105,23 +105,23 @@
 }
 
 .modal-confirmacao__btn--cancelar {
-  background-color: #f3f4f6;
-  color: #374151;
+  background-color: var(--gray-100);
+  color: var(--gray-800);
 }
 
 .modal-confirmacao__btn--cancelar:hover {
-  background-color: #e5e7eb;
+  background-color: var(--gray-200);
 }
 
 .modal-confirmacao__btn--confirmar {
-  background-color: #e74c3c;
-  color: white;
+  background-color: var(--danger);
+  color: var(--white);
 }
 
 .modal-confirmacao__btn--confirmar:hover {
-  background-color: #c0392b;
+  background-color: var(--danger-dark);
   transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(231, 76, 60, 0.3);
+  box-shadow: 0 4px 12px var(--danger-medium);
 }
 
 .modal-confirmacao__btn:active {

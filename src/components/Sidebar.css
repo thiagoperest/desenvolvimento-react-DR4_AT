@@ -1,6 +1,6 @@
 .sidebar {
   width: 280px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: var(--primary-gradient);
   min-height: 100vh;
   padding: 0;
   position: fixed;
@@ -12,11 +12,11 @@
 
 .sidebar__header {
   padding: 30px 25px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid var(--white-transparent);
 }
 
 .sidebar__title {
-  color: white;
+  color: var(--white);
   margin: 0;
   font-size: 1.5rem;
   font-weight: 600;
@@ -42,7 +42,7 @@
   align-items: center;
   gap: 15px;
   padding: 15px 25px;
-  color: rgba(255, 255, 255, 0.8);
+  color: var(--white-strong);
   text-decoration: none;
   transition: all 0.3s ease;
   border-left: 4px solid transparent;
@@ -50,16 +50,16 @@
 }
 
 .sidebar__link:hover {
-  background: rgba(255, 255, 255, 0.1);
-  color: white;
-  border-left-color: rgba(255, 255, 255, 0.3);
+  background: var(--white-transparent);
+  color: var(--white);
+  border-left-color: var(--white-medium);
 }
 
 .sidebar__link.active {
-  background: rgba(255, 255, 255, 0.15);
-  color: white;
-  border-left-color: white;
-  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.1);
+  background: var(--white-soft);
+  color: var(--white);
+  border-left-color: var(--white);
+  box-shadow: var(--shadow-inset);
 }
 
 .sidebar__link svg {

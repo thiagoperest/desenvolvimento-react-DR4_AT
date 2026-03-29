@@ -6,7 +6,7 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  color: white;
+  color: var(--white);
   text-decoration: none;
   font-weight: 500;
   margin-bottom: 30px;
@@ -18,7 +18,7 @@
 }
 
 .sessoes-clube__subtitle {
-  color: rgba(255, 255, 255, 0.9);
+  color: var(--white-bright);
   margin: 0 0 40px 0;
   font-size: 1.3rem;
   font-weight: 400;
@@ -32,17 +32,17 @@
 }
 
 .sessoes-clube__card {
-  background: rgba(255, 255, 255, 0.95);
+  background: var(--bg-card);
   backdrop-filter: blur(10px);
   border-radius: 16px;
   padding: 25px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--shadow-small);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .sessoes-clube__card:hover {
   transform: translateY(-2px);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+  box-shadow: var(--shadow-medium);
 }
 
 .sessoes-clube__card-header {
@@ -51,14 +51,14 @@
   align-items: center;
   margin-bottom: 20px;
   padding-bottom: 15px;
-  border-bottom: 2px solid #e9ecef;
+  border-bottom: 2px solid var(--border-light);
 }
 
 .sessoes-clube__date {
   display: flex;
   align-items: center;
   gap: 8px;
-  color: #667eea;
+  color: var(--primary-purple);
   font-weight: 600;
   font-size: 0.95rem;
 }
@@ -71,7 +71,7 @@
   display: flex;
   align-items: center;
   gap: 6px;
-  color: #6c757d;
+  color: var(--gray-500);
   font-size: 0.9rem;
 }
 
@@ -85,24 +85,24 @@
   gap: 12px;
   margin-bottom: 20px;
   padding: 15px;
-  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  background: linear-gradient(135deg, var(--bg-light) 0%, var(--white) 100%);
   border-radius: 10px;
-  border-left: 4px solid #667eea;
+  border-left: 4px solid var(--primary-purple);
 }
 
 .sessoes-clube__book svg {
-  color: #667eea;
+  color: var(--primary-purple);
   flex-shrink: 0;
 }
 
 .sessoes-clube__book span {
   font-size: 1.1rem;
   font-weight: 600;
-  color: #2c3e50;
+  color: var(--dark);
 }
 
 .sessoes-clube__topics h4 {
-  color: #2c3e50;
+  color: var(--dark);
   margin: 0 0 12px 0;
   font-size: 1rem;
   font-weight: 600;
@@ -116,8 +116,8 @@
 }
 
 .sessoes-clube__topic {
-  background: #667eea;
-  color: white;
+  background: var(--primary-purple);
+  color: var(--white);
   padding: 6px 12px;
   border-radius: 20px;
   font-size: 0.85rem;
@@ -128,12 +128,12 @@
   display: flex;
   gap: 12px;
   padding: 15px;
-  background: #f8f9fa;
+  background: var(--bg-light);
   border-radius: 10px;
 }
 
 .sessoes-clube__ata svg {
-  color: #6c757d;
+  color: var(--gray-500);
   flex-shrink: 0;
   margin-top: 2px;
 }
@@ -141,7 +141,7 @@
 .sessoes-clube__ata p {
   margin: 0;
   line-height: 1.6;
-  color: #555;
+  color: var(--text-muted);
   font-size: 0.95rem;
 }
 
@@ -151,19 +151,19 @@
   align-items: center;
   justify-content: center;
   padding: 60px 20px;
-  background: rgba(255, 255, 255, 0.95);
+  background: var(--bg-card);
   backdrop-filter: blur(10px);
   border-radius: 16px;
   text-align: center;
 }
 
 .sessoes-clube__empty svg {
-  color: #ccc;
+  color: var(--gray-light);
   margin-bottom: 20px;
 }
 
 .sessoes-clube__empty p {
-  color: #6c757d;
+  color: var(--gray-500);
   font-size: 1.1rem;
   margin: 0;
 }

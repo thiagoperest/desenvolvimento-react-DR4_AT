@@ -1,8 +1,60 @@
 :root {
-  --text: #6b6375;
-  --text-h: #08060d;
   --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
   --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
+
+  /* Cores */
+  --text: #6b6375;
+  --text-h: #08060d;
+  --primary-purple: #667eea;
+  --primary-purple-dark: #764ba2;
+  --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+
+  --white: #ffffff;
+  --white-gray: #f0f0f0;
+  --black: #000;
+  --gray-light: #ccc;
+  --gray-100: #f3f4f6;
+  --gray-200: #e5e7eb;
+  --gray-500: #6c757d;
+  --gray-600: #6b7280;
+  --gray-700: #4b5563;
+  --gray-800: #374151;
+  --gray-900: #1f2937;
+  --dark: #2c3e50;
+  --text-muted: #555;
+
+  --bg-light: #f8f9fa;
+  --bg-card: rgba(255, 255, 255, 0.95);
+  --bg-overlay: rgba(0, 0, 0, 0.5);
+  --bg-error-light: #fef5f5;
+  --white-transparent: rgba(255, 255, 255, 0.1);
+  --white-soft: rgba(255, 255, 255, 0.15);
+  --white-medium: rgba(255, 255, 255, 0.3);
+  --white-strong: rgba(255, 255, 255, 0.8);
+  --white-bright: rgba(255, 255, 255, 0.9);
+  --purple-light: rgba(102, 126, 234, 0.1);
+  --purple-soft: rgba(102, 126, 234, 0.15);
+  --purple-medium: rgba(102, 126, 234, 0.3);
+  --danger-light: rgba(231, 76, 60, 0.1);
+  --danger-medium: rgba(231, 76, 60, 0.3);
+  --black-light: rgba(0, 0, 0, 0.1);
+
+  --success: #10b981;
+  --danger: #e74c3c;
+  --danger-dark: #c0392b;
+  --warning: #f59e0b;
+  --error: #ef4444;
+
+  --blue: #3b82f6;
+  --blue-dark: #2563eb;
+  --blue-darker: #1d4ed8;
+
+  --border-light: #e9ecef;
+
+  --shadow-small: 0 10px 30px rgba(0, 0, 0, 0.2);
+  --shadow-medium: 0 15px 40px rgba(0, 0, 0, 0.25);
+  --shadow-large: 0 20px 60px rgba(0, 0, 0, 0.3);
+  --shadow-inset: inset 0 0 20px rgba(0, 0, 0, 0.1);
 
   font: 18px/145% var(--sans);
   letter-spacing: 0.18px;
