@@ -127,3 +127,21 @@
 .modal-confirmacao__btn:active {
   transform: translateY(0);
 }
+
+@media (max-width: 480px) {
+  .modal-confirmacao__dialog {
+    width: 95%;
+    border-radius: 10px;
+  }
+
+  .modal-confirmacao__footer {
+    flex-direction: column-reverse;
+    gap: 8px;
+    padding: 16px;
+  }
+
+  .modal-confirmacao__btn {
+    width: 100%;
+    text-align: center;
+  }
+}
