@@ -1,0 +1,60 @@
+{
+  "id": "clb-002",
+  "nome": "Universo Sci-Fi",
+  "descricao": "Explorando os limites da imaginação científica e discutindo como a ficção prevê e influencia nosso futuro tecnológico. O Universo Sci-Fi é um clube voltado para entusiastas de ficção científica que desejam ir além do entretenimento e analisar as implicações filosóficas, científicas e sociais presentes nas obras do gênero. Debatemos desde clássicos como Isaac Asimov, Arthur C. Clarke e Philip K. Dick até autores contemporâneos que exploram temas como inteligência artificial, viagens espaciais, distopias tecnológicas e a relação entre humanidade e máquinas. Atualmente estamos imersos em 'Duna', de Frank Herbert, explorando suas camadas de política interestelar, ecologia planetária, religião e poder. Nossos encontros online permitem a participação de membros de diferentes localidades, enriquecendo as discussões com perspectivas diversas. Além da análise literária, frequentemente relacionamos os conceitos ficcionais com avanços científicos reais, discutimos adaptações para cinema e TV, e compartilhamos descobertas sobre novos autores e obras que estão moldando o futuro da ficção científica.",
+  "categoria": "Ficção Científica",
+  "diasEncontro": ["Terça"],
+  "horario": "20:30",
+  "local": "Online",
+  "coordenador": "Carlos Eduardo",
+  "membrosAtivos": 11,
+  "status": "Ativo",
+  "dataCriacao": "2023-05-20T00:00:00Z",
+  "livroAtual": {
+    "titulo": "Duna",
+    "autor": "Frank Herbert",
+    "dataInicio": "2024-02-01T00:00:00Z",
+    "dataTerminoPrevisto": "2024-04-15T00:00:00Z"
+  },
+  "sessoes": [
+    {
+      "id": "sess-002-1",
+      "data": "2024-02-06T20:30:00Z",
+      "livroDiscutido": "Duna (Livro 1)",
+      "participantes": 10,
+      "topicosAbordados": ["Ecologia de Arrakis", "Política interestelar", "A Profecia"],
+      "ata": "Análise profunda do ecossistema de Arrakis e como a especiaria molda o poder político. Discussão sobre o papel de Paul Atreides na profecia."
+    },
+    {
+      "id": "sess-002-2",
+      "data": "2024-02-13T20:30:00Z",
+      "livroDiscutido": "Duna (Livro 2)",
+      "participantes": 9,
+      "topicosAbordados": ["Fremen", "Tecnologia", "Religião"],
+      "ata": "Debate sobre a cultura Fremen e sua adaptação ao ambiente hostil. Análise da relação entre tecnologia proibida e desenvolvimento social."
+    }
+  ],
+  "membros": [
+    {
+      "id": "mbr-002-1",
+      "nome": "Carlos Eduardo",
+      "email": "carlos.eduardo@email.com",
+      "dataIngresso": "2023-05-20T00:00:00Z",
+      "frequencia": 100
+    },
+    {
+      "id": "mbr-002-2",
+      "nome": "Mariana Lima",
+      "email": "mariana.lima@email.com",
+      "dataIngresso": "2023-06-05T00:00:00Z",
+      "frequencia": 85
+    },
+    {
+      "id": "mbr-002-3",
+      "nome": "Roberto Alves",
+      "email": "roberto.alves@email.com",
+      "dataIngresso": "2023-07-12T00:00:00Z",
+      "frequencia": 78
+    }
+  ]
+}

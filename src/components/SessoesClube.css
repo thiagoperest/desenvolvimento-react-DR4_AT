@@ -1,0 +1,191 @@
+.sessoes-clube {
+  padding: 0;
+}
+
+.sessoes-clube__back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 500;
+  margin-bottom: 30px;
+  transition: all 0.3s ease;
+}
+
+.sessoes-clube__back-link:hover {
+  transform: translateX(-3px);
+}
+
+.sessoes-clube__subtitle {
+  color: var(--white-bright);
+  margin: 0 0 40px 0;
+  font-size: 1.3rem;
+  font-weight: 400;
+  text-align: center;
+}
+
+.sessoes-clube__list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.sessoes-clube__card {
+  background: var(--bg-card);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: var(--shadow-small);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sessoes-clube__card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-medium);
+}
+
+.sessoes-clube__card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid var(--border-light);
+}
+
+.sessoes-clube__date {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--primary-purple);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.sessoes-clube__date svg {
+  flex-shrink: 0;
+}
+
+.sessoes-clube__participants {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--gray-500);
+  font-size: 0.9rem;
+}
+
+.sessoes-clube__participants svg {
+  flex-shrink: 0;
+}
+
+.sessoes-clube__book {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  padding: 15px;
+  background: linear-gradient(135deg, var(--bg-light) 0%, var(--white) 100%);
+  border-radius: 10px;
+  border-left: 4px solid var(--primary-purple);
+}
+
+.sessoes-clube__book svg {
+  color: var(--primary-purple);
+  flex-shrink: 0;
+}
+
+.sessoes-clube__book span {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--dark);
+}
+
+.sessoes-clube__topics h4 {
+  color: var(--dark);
+  margin: 0 0 12px 0;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.sessoes-clube__topics-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.sessoes-clube__topic {
+  background: var(--primary-purple);
+  color: var(--white);
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.sessoes-clube__ata {
+  display: flex;
+  gap: 12px;
+  padding: 15px;
+  background: var(--bg-light);
+  border-radius: 10px;
+}
+
+.sessoes-clube__ata svg {
+  color: var(--gray-500);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.sessoes-clube__ata p {
+  margin: 0;
+  line-height: 1.6;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.sessoes-clube__empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  background: var(--bg-card);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  text-align: center;
+}
+
+.sessoes-clube__empty svg {
+  color: var(--gray-light);
+  margin-bottom: 20px;
+}
+
+.sessoes-clube__empty p {
+  color: var(--gray-500);
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .sessoes-clube__card-header {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+  
+  .sessoes-clube__book {
+    flex-direction: column;
+    text-align: center;
+    gap: 8px;
+  }
+  
+  .sessoes-clube__ata {
+    flex-direction: column;
+  }
+  
+  .sessoes-clube__topics-list {
+    justify-content: center;
+  }
+}
